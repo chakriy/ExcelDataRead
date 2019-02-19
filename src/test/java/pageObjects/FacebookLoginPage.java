@@ -2,9 +2,15 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import static stepDefs.Hooks.*;
@@ -32,9 +38,8 @@ public class FacebookLoginPage {
     }
     public void Click() throws InterruptedException {
         submitButton.click();
-        ScShot.capScrSht(myDriver,"screenShot");
+        ScShot.capScrSht(myDriver, "screenShot");
         myDriver.quit();
-
-
     }
+
 }

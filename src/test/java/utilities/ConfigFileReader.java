@@ -64,5 +64,11 @@ public class ConfigFileReader {
         if(path != null) return path;
         else throw new RuntimeException("filePath not specified in the Configuration.properties file.");
     }
+    public String getSheetName(){
+        String path = prop.getProperty("sheetName");
+        if(path != null) return path;
+        else throw new RuntimeException("sheetName not specified in the Configuration.properties file.");
+    }
+
 
 }

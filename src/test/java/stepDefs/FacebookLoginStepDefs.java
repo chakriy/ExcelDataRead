@@ -25,34 +25,20 @@ public class FacebookLoginStepDefs {
     @Given("^U r in facebook login page$")
     public void step1()
     {
-        System.out.println("I'm in Given");
+//        System.setProperty("webdriver.chrome.driver", cfr.getDriverPath());
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--start-maximized");
+//        myDriver = new ChromeDriver(options);
+//        myDriver.get(cfr.getApplicationUrl());
+
     }
     @When("^Getting Values From Excel and Feeding to Facebook Login$")
-    public void step2() throws Exception {
-        hm = edo.ExcelDataObject();
-        Set s = hm.entrySet();
-        Iterator i = s.iterator();
-        while(i.hasNext())
-        {
-            System.setProperty("webdriver.chrome.driver", cfr.getDriverPath());
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--start-maximized");
-            myDriver = new ChromeDriver(options);
-            flp.accessFacebookLoginPage();
-            PageFactory.initElements(myDriver, FacebookLoginPage.class);
-            {
-                Map.Entry mp = (Map.Entry) i.next();
-                flp.setEmailInput((String) mp.getKey());
-                System.out.println("UserName is " + mp.getKey());
-                flp.setPwdInput((String) mp.getValue());
-                System.out.println("passWord is " + mp.getValue());
-                flp.Click();
-            }
-
-
-        }
-
-
+    public void step2() throws Exception
+    {
+        edo.ExcelDataObject();
+        //edo.ExcelDataObject("User2");
+       // edo.ExcelDataObject("testdata","User3");
+       // edo.ExcelDataObject("Book1.xlsx","testdata","User5");
     }
     @Then("^Check Whether Logging in to Facebook And quit$")
     public void step3()

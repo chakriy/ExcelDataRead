@@ -1,10 +1,6 @@
 package utilities;
 
-/**
- * Created by balajakka on 07/02/2019.
- */
-
-    import org.apache.log4j.Logger;
+import org.apache.log4j.Logger;
 
 public class Log {
 
@@ -20,7 +16,7 @@ public class Log {
 
         Log.info("****************************************************************************************");
 
-        Log.info("$$$$$$$$$$$$$$$$$$$$$                 " + sTestCaseName + "       $$$$$$$$$$$$$$$$$$$$$$$$$");
+        Log.info("$$$$$$$$$$$$$$$$$$$$$             " + sTestCaseName + "       $$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
         Log.info("****************************************************************************************");
 
